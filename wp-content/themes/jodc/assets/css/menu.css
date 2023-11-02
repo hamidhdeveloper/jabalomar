@@ -10,6 +10,7 @@
   z-index: 10;
   width: 100%;
   height: auto;
+  
 }
 
 .header-flex-box {
@@ -28,6 +29,7 @@
 .logo-img-box {
   position: relative;
   overflow: hidden;
+  
 }
 
 .logo img {
@@ -153,7 +155,7 @@ body.active .menu-open:before {
   z-index: 2;
 }
 .dark-bg-1 {
-  background: #111517;
+  background: #374c5f;
 }
 
 .midnightHeader.default .logo-black,
@@ -265,6 +267,7 @@ body.active .menu-open:before {
   left: calc(50% + 40px);
   overflow: hidden;
   z-index: 3;
+  cursor: pointer;
  
 }
 .nav-logo a img{
@@ -312,6 +315,7 @@ body.out .nav-container.active .nav-logo img {
   -webkit-transition: 0.5s cubic-bezier(0.767, 0.01, 0.18, 1.01);
   -o-transition: 0.5s cubic-bezier(0.767, 0.01, 0.18, 1.01);
   transition: 0.5s cubic-bezier(0.767, 0.01, 0.18, 1.01);
+  cursor: pointer;
 }
 
 body.out .nav-container.active .menu-close {
@@ -393,7 +397,7 @@ body.out .nav-container.active .menu-close:before {
   height: 100%;
   margin-left: calc(50% - 2px);
   position: relative;
-  border-left: 2px solid #111517;
+  border-left: 2px solid #374c5f;
 }
 
 .nav-box {
@@ -693,8 +697,8 @@ body.out .nav-container.active li li:nth-last-child(12) a {
   font-size: 1.5rem;
   line-height: 1;
   font-weight: 500;
-  font-family: "Oswald", sans-serif;
-  color: white;
+  font-family: "TanseekModernProArabic-Medium", sans-serif;
+  color: var(--white);
   white-space: nowrap;
 }
 
@@ -702,7 +706,7 @@ body.out .nav-container.active li li:nth-last-child(12) a {
   content: attr(data-text);
   position: absolute;
   top: 50%;
-  color: #9da07c;
+  color: var(--secondary);
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -713,7 +717,7 @@ body.out .nav-container.active li li:nth-last-child(12) a {
   width: 0%;
   white-space: nowrap;
   overflow: hidden;
-  background: #111517;
+  background: #374c5f;
 }
 
 .nav-btn.active:before {
@@ -736,10 +740,10 @@ a:hover .nav-btn:before {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -2;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  opacity: 0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
   -webkit-transition: 0.9s cubic-bezier(0.767, 0.01, 0.18, 1.01);
   -o-transition: 0.9s cubic-bezier(0.767, 0.01, 0.18, 1.01);
   transition: 0.9s cubic-bezier(0.767, 0.01, 0.18, 1.01);
@@ -760,7 +764,7 @@ a:hover .nav-btn:before {
   position: absolute;
   top: 0;
   left: 0;
-  background: #111517;
+  background: #374c5f;
   -webkit-transition: 0.7s cubic-bezier(0.858, 0.01, 0.068, 0.99);
   -o-transition: 0.7s cubic-bezier(0.858, 0.01, 0.068, 0.99);
   transition: 0.7s cubic-bezier(0.858, 0.01, 0.068, 0.99);
@@ -844,6 +848,7 @@ body.out .nav-container.active .nav-menu:before {
 }
 
 .nav-link .nav-btn {
+ 
   -webkit-transition: 1s cubic-bezier(0.767, 0.01, 0.18, 1.01);
   -o-transition: 1s cubic-bezier(0.767, 0.01, 0.18, 1.01);
   transition: 1s cubic-bezier(0.767, 0.01, 0.18, 1.01);
@@ -1344,15 +1349,15 @@ body.out .nav-container.active .dropdown-close.active {
     align-items: center;
 }
 .language{
-  color: white;
+  color: var(--white);
   font-weight: 500;
   font-size: 1.5rem;
   text-decoration-line: underline;
-  text-decoration-color: #9da07c;
+  text-decoration-color: var(--secondary);
   
 }
 .language:hover{
-  text-decoration-color: #ffffff;
+  text-decoration-color: var(--white);
   transition:0.25s ease-out;
 }
 .box3{
@@ -1361,25 +1366,23 @@ body.out .nav-container.active .dropdown-close.active {
 .menu-icon{
   height: 1rem;
 }
-.border-outline-search{
-  border: 2px solid #9da07c;
-  padding: 1.2rem;
-  border-radius: 50%;
-  height: 3rem;
-}
+
+
+
 .menu-outline{
-  border: 2px solid #9da07c;
+  border: 2px solid transparent;
   padding: 2rem;
   height: 4rem;
   border-radius: 52%;
   width: 4rem;
+  transition: all 0.5s;
+  cursor: pointer;
 }
-.border-outline{
-   border: 2px solid #9da07c;
-   padding: 2rem;
-   height: 3rem;
-   border-radius: 50%;
+
+.menu-outline:hover{
+  border-color: var(--white);
 }
+
 .search-icon{
   height: 1rem;
 }
@@ -1387,7 +1390,7 @@ body.out .nav-container.active .dropdown-close.active {
 
 .language_menu ul li a {
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   font-size: 20px;
   display: block;
   transition: transform 0.2s;

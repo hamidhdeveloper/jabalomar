@@ -7,7 +7,6 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>"/>
 <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" /> -->
 <link rel="pingback" href="<?php bloginfo('pingback url'); ?>" /> 
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
@@ -59,7 +58,7 @@
             <?php wp_nav_menu($args);?>
             </div>
             <div class="search_container">
-              <i class="fas fa-search"></i>
+              <i class="fas fa-search" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); color:var(--white)"></i>
             </div>
             <!-- menu-open start -->
             <div class="menu-outline">
@@ -81,8 +80,8 @@
 <nav class="nav-container dark-bg-1">
   <!-- nav-logo start -->
   <div class="nav-logo">
-    <a href="index.php">
-      <img src="<?php bloginfo('template_directory'); ?>/assets/images/logo-dark.png" alt="logo" loading="lazy" />
+    <a href="<?php echo home_url();?>">
+      <img src="<?php bloginfo('template_directory'); ?>/assets/images/logo-light.png" alt="logo" loading="lazy" />
     </a>
   </div>
   <!-- nav-logo end -->
