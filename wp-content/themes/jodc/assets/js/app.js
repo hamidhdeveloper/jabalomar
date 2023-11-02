@@ -90,6 +90,105 @@ jQuery(document).ready(function () {
       }
     });
   }
+
+// my jquery start here
+
+
+
+//   onscroll apply background to header 
+
+$(window).on("scroll", function() {
+    if($(window).scrollTop() > 50) {
+        $(".main-myheader").addClass("headerbOnscroll");
+        
+    } else {
+        //remove the background property so it comes transparent again (defined in your css)
+       $(".main-myheader").removeClass("headerbOnscroll");
+    }
+});
+
+// Onscroll back to top button to be hide
+$(".to-top-btn").addClass("mPS2id-highlight");
+$(window).on("scroll", function() {
+  if($(window).scrollTop() < 90) {
+      $(".to-top-btn").addClass("mPS2id-highlight");
+  } else {
+      //remove the background property so it comes transparent again (defined in your css)
+     $(".to-top-btn").removeClass("mPS2id-highlight");
+  }
+});
+
+
+
+
+
+
+
+
+// inview scroll animation
+// ********** for overlay text animations  *******************
+jQuery(".overlay-text-animation").bind("inview", function (event, visible) {
+  if (visible == true) {
+    $(".overlay-loading1").addClass("translateX-110");
+  $(".overlay-loading2").addClass("translateX-110");
+  }
+});
+/***********  logos images overlay animation -------------*/ 
+jQuery(".partner-main-container").bind("inview", function (event, visible) {
+if (visible == true) {
+  $(".sectors_thumnails_overlay").addClass("slide_amimation_time15_delay05");
+}
+});
+
+
+/***********  logos images overlay animation -------------*/ 
+jQuery(".partner-main-container").bind("inview", function (event, visible) {
+if (visible == true) {
+  $(".sectors_thumnails_overlay").addClass("slide_amimation_time15_delay05");
+}
+});
+
+/***********  progress bar animation -------------*/ 
+jQuery(".progress-bar-all").bind("inview", function (event, visible) {
+if (visible == true) {
+  $(".progress-full").addClass("slide-progress");
+}
+});
+
+
+
+/***********  counter section animation -------------*/ 
+jQuery(".content2iconboxes").bind("inview", function (event, visible) {
+if (visible == true) {
+  //javascript
+   // for counter animation
+   
+   let valueDisplays = document.querySelectorAll(".num");
+   let interval = 4000;
+   
+   valueDisplays.forEach((valueDisplay) => {
+     let startValue = 0;
+     let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+     let duration = Math.floor(interval / endValue);
+     let counter = setInterval(function () {
+       startValue +=1;
+       valueDisplay.textContent = startValue;
+       if (startValue == endValue) {
+         clearInterval(counter);
+       }
+     }, duration);
+   });
+
+
+  // javascript
+}
+});
+
+// my jquery end here
+
+
+
+
 });
 
 jQuery(window).scroll(function () {
@@ -117,3 +216,8 @@ jQuery(window).scroll(function () {
     jQuery(".side_socila_media").removeClass("side_socila_media_scroll");
   }
 });
+
+
+
+
+        

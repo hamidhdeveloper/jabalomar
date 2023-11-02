@@ -36,6 +36,7 @@ function deu_register_scripts(){
     wp_enqueue_script('app-inview', get_template_directory_uri()."/assets/js/jquery.inview.min.js", array('app-jquery'), '1.1.1', false);
     wp_enqueue_script('app-app', get_template_directory_uri()."/assets/js/app.js", array('app-jquery'), '1.1.1', false);
     wp_enqueue_script('app-menu-js', get_template_directory_uri()."/assets/js/menu.js", array('app-jquery'), '1.1.1', false);
+    
 }
 add_action('wp_enqueue_scripts', 'deu_register_scripts');
 
