@@ -1,0 +1,226 @@
+/*
+Theme name: Jodc theme
+Theme URI: https://n24-sa.com
+Description: 'Jodc website theme'
+Tags: Jodc-theme
+Author: Mohammed Jamal
+Author URI: https://n24-sa.com
+Version: 1.0
+*/
+
+@font-face {
+  font-family: "TanseekModernProArabic-ExBold";
+  src: url("./assets/fonts/TanseekModernProArabic-ExBold.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TanseekModernProArabic-Bold";
+  src: url("./assets/fonts/TanseekModernProArabic-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TanseekModernProArabic-Medium";
+  src: url("./assets/fonts/TanseekModernProArabic-Medium.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TanseekModernProArabic-Light";
+  src: url("./assets/fonts/TanseekModernProArabic-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.home_video_container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #374c5f;
+}
+
+.video_background_image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 1;
+}
+
+#video {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-size: contain;
+  object-fit: cover;
+}
+
+.video_overlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: linear-gradient(
+    to bottom,
+    rgba(55, 76, 95, 0) 29%,
+    rgba(55, 76, 95, 0.5) 67%,
+    rgba(55, 76, 95, 1) 95%,
+    rgba(55, 76, 95, 1) 100%
+  );
+}
+
+.video_content_outer_container {
+  position: absolute;
+  width: 100%;
+  z-index: 4;
+}
+
+.video_content_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main_header {
+  font-family: "TanseekModernProArabic-Bold";
+  color: #ffffff;
+  font-size: 80px;
+  line-height: 65%;
+  text-transform: uppercase;
+}
+
+.slider_content {
+  font-family: "TanseekModernProArabic-Light";
+  color: #ffffff;
+  font-size: 35px;
+  line-height: 70%;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.haeder {
+  width: 100%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  padding: 30px 0px;
+}
+
+.header_flex {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_container {
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  transform: translateY(110%);
+  -webkit-transition: 0.5s cubic-bezier(0.767, 0.01, 0.18, 1.01);
+  -o-transition: 0.5s cubic-bezier(0.767, 0.01, 0.18, 1.01);
+  transition: 0.5s cubic-bezier(0.767, 0.01, 0.18, 1.01);
+}
+
+.header_right_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.language_menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.language_menu ul li {
+  list-style: none;
+}
+
+.language_menu ul li a {
+  list-style: none;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "TanseekModernProArabic-Medium";
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.language_menu ul li a:hover {
+  color: #9da07c;
+}
+
+.search_container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.search_container:hover {
+  border: 2px solid #ffffff;
+}
+
+@media only screen and (max-width: 1300px) {
+}
+
+/* heading filling animation */
+
+
+/* heading animation */
+
+.myfill-title{
+  transition: all .9s cubic-bezier(0,0,.23,1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg,#ffffff,#ffffff 50%,#9DA07C 0);
+  background-size: 200% 100%;
+  background-position: 100%;
+  color: #9DA07C;
+  
+}
+.myfill-text{
+transition: all .9s cubic-bezier(0,0,.23,1);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-image: linear-gradient(90deg,#ffffff,#ffffff 50%,#9DA07C 0);
+background-size: 200% 100%;
+background-position: 100%;
+color: #9DA07C;
+
+}

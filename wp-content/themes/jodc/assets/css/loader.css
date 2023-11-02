@@ -1,0 +1,26 @@
+/* for loader animation */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background: #374c5f;
+  -webkit-transition: 1s cubic-bezier(0.858, 0.01, 0.068, 0.99);
+  -o-transition: 1s cubic-bezier(0.858, 0.01, 0.068, 0.99);
+  transition: 1s cubic-bezier(0.858, 0.01, 0.068, 0.99);
+}
+
+.loader_img {
+  width: 110px;
+  height: auto;
+}
+
+
