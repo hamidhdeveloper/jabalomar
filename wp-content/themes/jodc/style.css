@@ -219,7 +219,15 @@ Version: 1.0
   background-size: 200% 100%;
   background-position: 100%;
   color: var(--primary);
-  
+}
+.myfill-title-invert{
+  transition: all 1.7s cubic-bezier(0,0,.23,1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg,var(--primary),var(--primary) 50%,var(--light-gray) 0);
+  background-size: 200% 100%;
+  background-position: 100%;
+  color: var(--light-gray);
 }
 .myfill-text{
 transition: all .9s cubic-bezier(0,0,.23,1);
@@ -274,9 +282,9 @@ overflow: hidden;
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-transition: 1s cubic-bezier(0.858, 0.01, 0.068, 0.99);
-  -o-transition: 1s cubic-bezier(0.858, 0.01, 0.068, 0.99);
-  transition: 1s cubic-bezier(0.858, 0.01, 0.068, 0.99);
+  -webkit-transition: 1.7s cubic-bezier(0.858, 0.01, 0.068, 0.99);
+  -o-transition: 1.7s cubic-bezier(0.858, 0.01, 0.068, 0.99);
+  transition: 1.7s cubic-bezier(0.858, 0.01, 0.068, 0.99);
   z-index: 3;
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -644,6 +652,28 @@ overflow: hidden;
 /* header logo animation */
 
 
+/*  Scroll fade animation  when scroll a page*/
+.fade-anim-box {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  transform: translateY(30px);
+  -webkit-transition: 1.7s cubic-bezier(0.767, 0.01, 0.18, 1.01);
+  -o-transition: 1.7s cubic-bezier(0.767, 0.01, 0.18, 1.01);
+  transition: 1.7s cubic-bezier(0.767, 0.01, 0.18, 1.01);
+}
+
+.fade-anim-box.fade-anim {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+
+
+
+
 /* header css */
 .main-myheader{
 -webkit-transition: all ease-out .5s;
@@ -845,7 +875,6 @@ display: flex;
 }
 
 .content2{
-color: #000;
 font-family: "TanseekModernProArabic-Bold", Helvetica;
 font-size: 4rem;
 font-weight: 400;
@@ -976,7 +1005,7 @@ height: 3rem;
 .award-section{
 background: #EDEDED;
 padding: 0rem;
-height: 41rem;
+height: 37rem;
 }
 .slider-wrap-award {
 position: absolute;
@@ -1015,7 +1044,7 @@ display: flex;
 gap: 2rem;
 }
 .item-award:nth-child(even) {
-top: 44%;
+top: 20%;
 }
 .item-award {
 position: relative;
@@ -1040,7 +1069,7 @@ margin: 0rem;
 }
 .award-progress-bar {
 position: absolute;
-bottom: -89px;
+bottom: 0px;
 left: 0;
 height: 0px;
 overflow: visible;
@@ -1798,6 +1827,8 @@ border-top: 2px solid #34c2d8;
 }
 
 /*  border button animation ends here */
+
+
 
 /* 8.1. To top button */
 .to-top-btn {

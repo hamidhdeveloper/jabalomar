@@ -55,9 +55,7 @@
                   <span> LOREM IPSUM DOLOR SIT AMET</span>
                 </h1>
                 </div>
-                <div class="overlay-text-animation">
-                  <div class="overlay-loading2"></div>
-                <p class="contentpara">
+                <p class="contentpara fade-anim-box">
                 
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eli
                   <br />
@@ -65,7 +63,7 @@
                   <br />
                   adipiscing elit, sed diam nonummy nibh eli euismod tincidunt ut laoreet dolore magna
                 </p>
-                  </div>
+                
                 <!-- animated button -->
                 <!-- <div class="border-btn-box border-btn-red pointer-large">
                         <div class="border-btn-inner">
@@ -90,8 +88,8 @@
         <div class="row">
           <div class="container content-container2">
             <div class="col-md-12">
-              <h1 class="content2">Lorem ipsum</h1>
-                <p class="contentpara2">
+              <h1 class="content2 myfill-title-invert">ENVISIONING GROWTH ENVISIONING GROWTH</h1>
+                <p class="contentpara2 fade-anim-box">
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eli
                   <br />
                   euismod tincidunt ut laoreet dolore magna Lorem ipsum dolor sit amet, consectetue
@@ -132,7 +130,7 @@
               <div class="row">
               <div class="col-md-7"></div>
               <div class="col-md-4 progress-bar-col">
-                <h1 class="progress-h1">Lorem ipsum </h1>
+                <h1 class="progress-h1 myfill-title-invert">Lorem ipsum </h1>
                 <!-- all progress bars -->
                 <div class="progress-bar-all">
           <!-- progress-box start -->
@@ -222,8 +220,8 @@
       <div class="container paterner-container">
       <div class="row">
           <div class="col-md-12">
-            <h1 class="paterner-content">Lorem ipsum</h1>
-              <p class="partner-content-para">
+            <h1 class="paterner-content myfill-title-invert">Lorem ipsum</h1>
+              <p class="partner-content-para fade-anim-box">
                 Lorem ipsum dolor sit amet, consectetuer
                 <br />
                 adipiscing elit, sed diam nonummy nibh
@@ -276,66 +274,66 @@
        <div class="container-fluid award-section">
 
 <div class="container">
-  <h1 class="award-title">Lorem ipsum</h1>
+  <h1 class="award-title myfill-title-invert">Lorem ipsum</h1>
 </div>
 <div class="slider-wrap-award">
   <div class="slider-award">
     <div class="slider-inner">
-      <div class="item-award">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 1.png" />
-        <p>Lorem</p>
+      <div class="item-award ">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 1.png"  class="fade-anim-box"/>
+        <p class="fade-anim-box">Lorem</p>
       </div>
       <div class="item-award">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 2.png" />
-        <p>Lorem</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 2.png" class="fade-anim-box" />
+        <p class="fade-anim-box">Lorem</p>
       </div>
       <div class="item-award">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 3.png" />
-        <p>Lorem</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 3.png" class="fade-anim-box"/>
+        <p class="fade-anim-box">Lorem</p>
       </div>
       <div class="item-award">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 4.png" />
-        <p>Lorem</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 4.png" class="fade-anim-box"/>
+        <p class="fade-anim-box">Lorem</p>
       </div>
       <div class="item-award">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 5.png" />
-        <p>Lorem</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 5.png" class="fade-anim-box"/>
+        <p class="fade-anim-box">Lorem</p>
       </div>
       <div class="item-award">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 6.png" />
-        <p>Lorem</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 6.png" class="fade-anim-box"/>
+        <p class="fade-anim-box">Lorem</p>
       </div>
       <div class="item-award">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 7.png" />
-        <p>Lorem</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 7.png" class="fade-anim-box"/>
+        <p class="fade-anim-box">Lorem</p>
       </div>
       <div class="item-award">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 1.png" />
-        <p>Lorem</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 1.png" class="fade-anim-box"/>
+        <p class="fade-anim-box">Lorem</p>
       </div>
       <div class="item-award">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 2.png" />
-        <p>Lorem</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 2.png" class="fade-anim-box"/>
+        <p class="fade-anim-box">Lorem</p>
       </div>
       <div class="item-award">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 3.png" />
-        <p>Lorem</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 3.png" class="fade-anim-box"/>
+        <p class="fade-anim-box">Lorem</p>
       </div>
       <div class="item-award">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 4.png" />
-        <p>Lorem</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 4.png" class="fade-anim-box"/>
+        <p class="fade-anim-box">Lorem</p>
       </div>
       <div class="item-award">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 5.png" />
-        <p>Lorem</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 5.png" class="fade-anim-box"/>
+        <p class="fade-anim-box">Lorem</p>
       </div>
       <div class="item-award">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 6.png" />
-        <p>Lorem</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 6.png" class="fade-anim-box"/>
+        <p class="fade-anim-box">Lorem</p>
       </div>
       <div class="item-award">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 7.png" />
-        <p>Lorem</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 7.png" class="fade-anim-box"/>
+        <p class="fade-anim-box">Lorem</p>
       </div>
     </div>
   </div>

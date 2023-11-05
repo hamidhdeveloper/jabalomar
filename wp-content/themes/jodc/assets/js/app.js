@@ -29,6 +29,8 @@ jQuery(document).ready(function () {
     });
   }, 1100); // 2000 milliseconds = 2 seconds
 
+
+
   ////////////////////fill text animation end/////////////////////////////
 
   jQuery(".responsive_menu").click(function () {
@@ -130,7 +132,6 @@ $(window).on("scroll", function() {
 jQuery(".overlay-text-animation").bind("inview", function (event, visible) {
   if (visible == true) {
     $(".overlay-loading1").addClass("translateX-110");
-  $(".overlay-loading2").addClass("translateX-110");
   }
 });
 /***********  logos images overlay animation -------------*/ 
@@ -148,12 +149,94 @@ if (visible == true) {
 }
 });
 
-/***********  progress bar animation -------------*/ 
-jQuery(".progress-bar-all").bind("inview", function (event, visible) {
+
+/***********  contert para section animation -------------*/ 
+jQuery(".contentpara").bind("inview", function (event, visible) {
+  if (visible == true) {
+    $(".contentpara").addClass("fade-anim");
+  }
+  });
+  
+/***********  counter section animation -------------*/ 
+jQuery(".contentpara2").bind("inview", function (event, visible) {
 if (visible == true) {
-  $(".progress-full").addClass("slide-progress");
+  $(".contentpara2").addClass("fade-anim");
 }
 });
+
+/***********  award section animation -------------*/ 
+jQuery(".item-award").bind("inview", function (event, visible) {
+  if (visible == true) {
+    $(".item-award img").addClass("fade-anim");
+    $(".item-award p").addClass("fade-anim");
+  }
+  });
+
+
+/***********  progress bar animation -------------*/ 
+jQuery(".progress-bar-all").bind("inview", function (event, visible) {
+  if (visible == true) {
+    $(".progress-full").addClass("slide-progress");
+  }
+  });
+
+  /***********  partner-content-para animation -------------*/ 
+jQuery(".partner-content-para").bind("inview", function (event, visible) {
+  if (visible == true) {
+    $(".partner-content-para").addClass("fade-anim");
+  }
+  });
+/***********  all title filling animation -------------*/ 
+jQuery(".content2").bind("inview", function (event, visible) {
+  if (visible == true) {
+
+    setTimeout(function () {
+      jQuery(".myfill-title-invert").css({
+        'background-position': '0',
+      });
+    }, 1000); // 2000 milliseconds = 2 seconds
+
+  }
+  });
+
+  jQuery(".progress-h1").bind("inview", function (event, visible) {
+    if (visible == true) {
+  
+      setTimeout(function () {
+        jQuery(".myfill-title-invert").css({
+          'background-position': '0',
+        });
+      }, 1000); // 2000 milliseconds = 2 seconds
+  
+    }
+    });
+
+    jQuery(".paterner-content").bind("inview", function (event, visible) {
+      if (visible == true) {
+    
+        setTimeout(function () {
+          jQuery(".myfill-title-invert").css({
+            'background-position': '0',
+          });
+        }, 2000); // 2000 milliseconds = 2 seconds
+    
+      }
+      });
+
+      
+    jQuery(".award-title").bind("inview", function (event, visible) {
+      if (visible == true) {
+    
+        setTimeout(function () {
+          jQuery(".myfill-title-invert").css({
+            'background-position': '0',
+          });
+        }, 2000); // 2000 milliseconds = 2 seconds
+    
+      }
+      });
+
+  
 
 
 
