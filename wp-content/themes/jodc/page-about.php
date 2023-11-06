@@ -5,252 +5,445 @@ Template Name: about
 ?>
 
 <?php get_header();?>
+<style>
+  /* @media only screen and (max-width: 767px) {
+    .about-main-section{
+      height: auto;
+    }
+    .about-main-h1 {
+      margin-top: 3rem; 
+      text-align: center; 
+    }
+    .about-main-para {
+      margin-bottom: 3rem;
+      text-align: center; 
+    }
+    .myscroll {
+      margin-bottom: 4rem;
+    text-align: left;
+    }
+
+  } */
+</style>
 <!-----------------------------------------------page content---------------------------------->
-<div class="pages_content_container">
+<!-- About  main Section  -->
+<div class="container-fluid">
+  <div class="row about-main-section">
+    <div class="col-md-6 about-main-left">
+      <img
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/about-main.png"
+      />
+    </div>
+    <div class="col-md-6 about-main-right">
+      <!-- <h1 class="about-main-h1 myfill-title">Lorem ipsum dolor</h1> -->
+      <h2 class="about-main-h1">
+        <span class="about-main-h1" data-text="The best">The best</span><br />
+        <span class="about-main-h1" data-text="Services you">Services you</span
+        ><br />
+        <span class="about-main-h1 tr-delay05" data-text="can think of"
+          >can think of</span
+        >
+      </h2>
+      <p class="about-main-para fade-anim-box">
+        Lorem ipsum dolor sit amet, consectetuer<br />
+        adipiscing elit, sed diam nonummy nibh eli
+      </p>
 
-<div class="page_header">
-  <div class="page_header_overlay"></div>
-  <img src="<?php the_field('page_header_image'); ?>"/>
-  <div class="container">
-  <h2><?php the_title(); ?></h2>
+      <!-- scroll btn start  -->
+      <div class="myscroll">
+        <a
+          href="#down"
+          class="scroll-btn"
+          style="bottom: 0px; position: inherit"
+        >
+          <div class="scroll-arrow-box">
+            <span class="scroll-arrow"></span>
+          </div>
+          <div class="scroll-btn-flip-box">
+            <span class="scroll-btn-flip" data-text="Scroll">Scroll</span>
+          </div>
+        </a>
+      </div>
+      <!-- scroll btn end -->
+    </div>
   </div>
-</div><!--end of page_header-->
+</div>
 
-  
-<div style="width: 100%; height: 50px"></div>
+<!-- About main Section end -->
 
-<div class="container">
+<!-- About Section 2  -->
+
+<div class="container-fluid about-section-2">
   <div class="row">
-
-    <?php 
-    $args = array(
-    'category_name' => 'about_move',
-    'posts_per_page' => 1,
-    );
-    $arr_posts = new WP_Query( $args );
-    if ( $arr_posts->have_posts() ) :
-      while ( $arr_posts->have_posts() ) :
-      $arr_posts->the_post();
-    ?> 
-
-    <div class="col-lg-6 col-md-6 col-sm-12">
-      <div class="about_outer_container">
-        <div class="about_title_container">
-          <div class="about_title_line">
-            <h1 class="about_title_text"><?php pll_e('about'); ?></h1>
-            <div class="line"></div>
-          </div><!--end of about_title_line-->
-          <div class="about_title_line">
-            <div class="line"></div>
-            <h1 class="about_title_text"><?php pll_e('move_name'); ?></h1>
-          </div><!--end of about_title_line-->
-        </div><!--end of about_title_container-->
-
-        <div class="about_move_text">
-          <?php the_content();?>
-        </div><!--end of about_move_text-->
-      </div><!--end of about_title_container-->
-    </div><!--end of col-->
-
-    <div class="col-lg-6 col-md-6 col-sm-12">
-      <div class="about_image_container">
-        <img class="about_image_img" src="<?php the_post_thumbnail_url(); ?>"/>
+    <div class="container about-section-2-container">
+      <div class="col-md-12 about-section-2-col">
+        <h1 class="about-section-2-h1 myfill-title-invert">Lorem ipsum</h1>
+        <p class="about-section-2-para fade-anim-box">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh eli euismod tincidunt ut laoreet dolore magna Lorem ipsum
+          dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+          eli euismod tincidunt ut laoreet dolore magna Lorem ipsum dolor sit
+          amet, consectetuer adipiscing elit, sed diam nonummy nibh eli euismod
+          tincidunt ut laoreet dolore magna Lorem
+        </p>
+        <!-- animated button -->
+        <div class="border-btn-box border-btn-red pointer-large">
+          <div class="border-btn-inner">
+            <a href="about.html" class="border-btn" data-text="view more"
+              >view more</a
+            >
+          </div>
+        </div>
+        <!-- animated button end -->
+        <div class="container about-section-2-contentContainer">
+          <div class="about-section-2-icon-boxes">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/icon-2.svg"
+            />
+            <span class="num" data-val="250">000</span>
+            <p>Lorem ipsum dolor</p>
+          </div>
+          <div class="about-section-2-icon-boxes">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/icon-3.svg"
+            />
+            <span class="num" data-val="325">000</span>
+            <p>Lorem ipsum dolor</p>
+          </div>
+          <div class="about-section-2-icon-boxes">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/icon-4.svg"
+            />
+            <span class="num" data-val="425">000</span>
+            <p>Lorem ipsum dolor</p>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</div>
 
-    <?php
-    endwhile;
-    endif;?>
-  </div><!--end of row-->
+<!-- About Section 2 end -->
 
-
-
-<br><br><br><br>
-
-  
-    <?php 
-    $args = array(
-    'category_name' => 'message',
-    'posts_per_page' => 1,
-    );
-    $arr_posts = new WP_Query( $args );
-    if ( $arr_posts->have_posts() ) :
-      while ( $arr_posts->have_posts() ) :
-      $arr_posts->the_post();
-    ?> 
+<!-- Award Section-->
+<div class="container-fluid about-award-section">
+  <div class="overlay2"></div>
+  <!-- news section -->
+  <div class="container news-section-container">
     <div class="row">
+      <div class="col-md-6 news-left">
+        <h1 class="about-main-h1 myfill-title">Lorem ipsum dolor</h1>
+        <p class="about-main-para fade-anim-box">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat. Ut wisi enim ad minim veniam, quis nostr ud exerci tation
+          ullamcorper suscipit lobortis nisl ut aliquip Lorem ipsum dolor sit
+          amet
+        </p>
 
-
-
-    <h1 data-aos="fade-right" class="about_main_title"><?php the_title();?></h1>
-
-    <div style="width:100%; height: auto;">
-    <div class="line"></div>
+        <!-- arrow button -->
+        <div class="arrow-btn-box slider-fade slider-tr-delay06 top-margin-30">
+          <a href="about.html" class="arrow-btn pointer-large">view more</a>
+        </div>
+        <!-- arrow button ends here -->
+      </div>
+      <div class="col-md-6 news-right">
+        <img
+          src="<?php echo get_template_directory_uri(); ?>/assets/images/about news section.png"
+        />
+        <img
+          src="<?php echo get_template_directory_uri(); ?>/assets/images/about news section 2.png"
+        />
+      </div>
     </div>
+  </div>
+  <!-- news section -->
+  <div class="award-section-about">
+    <div class="slider-wrap-award">
+      <div class="slider-award">
+        <div class="slider-inner">
+          <div class="about-item-award">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 1.png"
+            />
+            <p>Lorem</p>
+          </div>
+          <div class="about-item-award">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 2.png"
+            />
+            <p>Lorem</p>
+          </div>
+          <div class="about-item-award">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 3.png"
+            />
+            <p>Lorem</p>
+          </div>
+          <div class="about-item-award">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 4.png"
+            />
+            <p>Lorem</p>
+          </div>
+          <div class="about-item-award">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 5.png"
+            />
+            <p>Lorem</p>
+          </div>
+          <div class="about-item-award">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 6.png"
+            />
+            <p>Lorem</p>
+          </div>
+          <div class="about-item-award">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 7.png"
+            />
+            <p>Lorem</p>
+          </div>
+          <div class="about-item-award">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 1.png"
+            />
+            <p>Lorem</p>
+          </div>
+          <div class="about-item-award">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 2.png"
+            />
+            <p>Lorem</p>
+          </div>
+          <div class="about-item-award">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 3.png"
+            />
+            <p>Lorem</p>
+          </div>
+          <div class="about-item-award">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 4.png"
+            />
+            <p>Lorem</p>
+          </div>
+          <div class="about-item-award">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 5.png"
+            />
+            <p>Lorem</p>
+          </div>
+          <div class="about-item-award">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 6.png"
+            />
+            <p>Lorem</p>
+          </div>
+          <div class="about-item-award">
+            <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/awards/award 7.png"
+            />
+            <p>Lorem</p>
+          </div>
+        </div>
+      </div>
 
-    <br><br>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-    <img data-aos="fade-right" class="about_icon" src="<?php the_post_thumbnail_url(); ?>"/>
+      <div class="award-progress-bar">
+        <div class="prog-bar-inner"></div>
+      </div>
     </div>
+  </div>
+  <!-- award-section-about -->
+</div>
+<!-- <div class="container-fluid about-award-section"> -->
 
-    <div class="col-lg-8 col-md-8 col-sm-8">
-      <div class="about_move_text" data-aos="fade-up" data-aos-duration="500">
-        <?php the_content();?>
-      </div><!--end of about_move_text-->
-    </div>
+<!-- Award Section end-->
 
-    </div><!--end of row-->
-    <?php
-    endwhile;
-    endif;?>
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br>
-
-  
-    <?php 
-    $args = array(
-    'category_name' => 'mission',
-    'posts_per_page' => 1,
-    );
-    $arr_posts = new WP_Query( $args );
-    if ( $arr_posts->have_posts() ) :
-      while ( $arr_posts->have_posts() ) :
-      $arr_posts->the_post();
-    ?> 
+<!-- About counter section start -->
+<section class="container-fluid about-counter-section2">
+  <div class="about-a-counter-container">
     <div class="row">
-
-
-
-    <h1 data-aos="fade-right" class="about_main_title"><?php the_title();?></h1>
-
-    <div style="width:100%; height: auto;">
-    <div class="line"></div>
+      <div class="col-md-12 a-counter-container">
+        <div class="a-counter">
+          <img
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/about-icons/row icon 1.png"
+          />
+          <h6>2,5M m2</h6>
+          <span>Lorem ipsum</span>
+        </div>
+        <div class="a-counter">
+          <img
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/about-icons/row icon 2.png"
+          />
+          <h6>2,5M m2</h6>
+          <span>Lorem ipsum</span>
+        </div>
+        <div class="a-counter">
+          <img
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/about-icons/row icon 3.png"
+          />
+          <h6>2,5M m2</h6>
+          <span>Lorem ipsum</span>
+        </div>
+        <div class="a-counter">
+          <img
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/about-icons/row icon 4.png"
+          />
+          <h6>2,5M m2</h6>
+          <span>Lorem ipsum</span>
+        </div>
+      </div>
     </div>
-
-    <br><br>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-    <img data-aos="fade-right" class="about_icon" src="<?php the_post_thumbnail_url(); ?>"/>
-    </div>
-
-    <div class="col-lg-8 col-md-8 col-sm-8">
-      <div class="about_move_text" data-aos="fade-up" data-aos-duration="500">
-        <?php the_content();?>
-      </div><!--end of about_move_text-->
-    </div>
-
-    </div><!--end of row-->
-    <?php
-    endwhile;
-    endif;?>
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br>
-
-  
-    <?php 
-    $args = array(
-    'category_name' => 'goals',
-    'posts_per_page' => 1,
-    );
-    $arr_posts = new WP_Query( $args );
-    if ( $arr_posts->have_posts() ) :
-      while ( $arr_posts->have_posts() ) :
-      $arr_posts->the_post();
-    ?> 
     <div class="row">
-
-
-
-    <h1 data-aos="fade-right" class="about_main_title"><?php the_title();?></h1>
-
-    <div style="width:100%; height: auto;">
-    <div class="line"></div>
+      <div class="col-md-12 a-counter-container">
+        <div class="a-counter">
+          <img
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/about-icons/row icon 5.png"
+          />
+          <h6>2,5M m2</h6>
+          <span>Lorem ipsum</span>
+        </div>
+        <div class="a-counter">
+          <img
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/about-icons/row icon 6.png"
+          />
+          <h6>2,5M m2</h6>
+          <span>Lorem ipsum</span>
+        </div>
+        <div class="a-counter">
+          <img
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/about-icons/row icon 7.png"
+          />
+          <h6>2,5M m2</h6>
+          <span>Lorem ipsum</span>
+        </div>
+        <div class="a-counter">
+          <img
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/about-icons/row icon 8.png"
+          />
+          <h6>2,5M m2</h6>
+          <span>Lorem ipsum</span>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+<!-- About counter section end -->
 
-    <br><br>
-
-    <div class="col-lg-4 col-md-4 col-sm-4">
-    <img data-aos="fade-right" class="about_icon" src="<?php the_post_thumbnail_url(); ?>"/>
+<!-- /* about us logo wheel section start */ -->
+<section class="container-fluid about-logo-scroll-section">
+  <div class="container">
+    <h1 class="award-title myfill-title-invert" style="padding-bottom: 0rem">
+      Lorem ipsum dolor sit ame
+    </h1>
+    <div class="brand-wheel">
+      <div class="brand-slide">
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logo1.png"
+          />
+        </div>
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logos-06@2x.png"
+          />
+        </div>
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logo1.png"
+          />
+        </div>
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logos-06@2x.png"
+          />
+        </div>
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logo1.png"
+          />
+        </div>
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logos-06@2x.png"
+          />
+        </div>
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logo1.png"
+          />
+        </div>
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logos-06@2x.png"
+          />
+        </div>
+      </div>
+      <div class="brand-slide delay">
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logo1.png"
+          />
+        </div>
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logos-06@2x.png"
+          />
+        </div>
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logo1.png"
+          />
+        </div>
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logos-06@2x.png"
+          />
+        </div>
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logo1.png"
+          />
+        </div>
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logos-06@2x.png"
+          />
+        </div>
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logo1.png"
+          />
+        </div>
+        <div class="logo-div">
+          <img
+            alt="#"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/partnerns/logos-06@2x.png"
+          />
+        </div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="col-lg-8 col-md-8 col-sm-8">
-      <div class="about_move_text">
-        <?php the_content();?>
-      </div><!--end of about_move_text-->
-    </div>
+<!-- /* about us logo wheel section */ end-->
 
-    </div><!--end of row-->
-    <?php
-    endwhile;
-    endif;?>
-
-
-
-
-
-
-
-
-    <br><br><br><br><br><br>
-
-
-    <h1 data-aos="fade-right" class="about_main_title"><?php pll_e('partners'); ?></h1>
-
-    <div style="width:100%; height: auto;">
-    <div class="line"></div>
-    </div>
-
-    <div class="partners_outer_container">
-    <?php 
-    $args = array(
-    'category_name' => 'partners',
-    );
-    $arr_posts = new WP_Query( $args );
-    if ( $arr_posts->have_posts() ) :
-      while ( $arr_posts->have_posts() ) :
-      $arr_posts->the_post();
-    ?> 
-
-    <div class="partners_inner_container">
-    <img data-aos="fade-right" class="parntner_image" src="<?php the_post_thumbnail_url(); ?>"/>
-    </div>
-
-
-    <?php
-    endwhile;
-    endif;?>
-    </div> 
-
-
-
-
-
-
-
-
-
-
-</div><!--end of container-->
-    
-
-<div style="width: 100%; height: 200px;"></div>
-</div><!--end of pages_content_container-->
 <!-----------------------------------------------end o page content---------------------------------->
 
 <?php get_footer();?>
-

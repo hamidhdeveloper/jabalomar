@@ -1,3 +1,4 @@
+/***********  home page animation -------------*/ 
 jQuery(document).ready(function () {
   setTimeout(function () {
     jQuery(".loader").css({
@@ -218,13 +219,13 @@ jQuery(".content2").bind("inview", function (event, visible) {
           jQuery(".myfill-title-invert").css({
             'background-position': '0',
           });
-        }, 2000); // 2000 milliseconds = 2 seconds
+        }, 1000); // 2000 milliseconds = 2 seconds
     
       }
       });
 
       
-    jQuery(".award-title").bind("inview", function (event, visible) {
+    jQuery(".award-title, .about-section-2-h1").bind("inview", function (event, visible) {
       if (visible == true) {
     
         setTimeout(function () {
@@ -241,7 +242,7 @@ jQuery(".content2").bind("inview", function (event, visible) {
 
 
 /***********  counter section animation -------------*/ 
-jQuery(".content2iconboxes").bind("inview", function (event, visible) {
+jQuery(".content2iconboxes, .about-section-2-icon-boxes").bind("inview", function (event, visible) {
 if (visible == true) {
   //javascript
    // for counter animation
@@ -265,9 +266,38 @@ if (visible == true) {
 
   // javascript
 }
-});
+}); // for counter animation
 
-// my jquery end here
+
+
+
+
+
+
+
+
+
+
+/***********  about us page animation -------------*/ 
+jQuery(".about-main-h1").bind("inview", function (event, visible) {
+  if (visible == true) {
+    $(".about-main-para").addClass("fade-anim");
+    setTimeout(function () {
+      jQuery(".myfill-title").css({
+        'background-position': '0',
+      });
+    }, 1000); // 2000 milliseconds = 2 seconds
+
+  }
+  });
+
+    /***********  about section 2 animation -------------*/ 
+jQuery(".about-section-2-para").bind("inview", function (event, visible) {
+  if (visible == true) {
+    $(".about-section-2-para").addClass("fade-anim");
+  }
+  });
+
 
 
 
@@ -304,3 +334,4 @@ jQuery(window).scroll(function () {
 
 
         
+

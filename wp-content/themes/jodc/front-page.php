@@ -28,6 +28,8 @@
                             <h1 class="main_header myfill-title" data-text="<?php the_title();?>"><?php the_title();?></h1>
                             <div class="slider_content myfill-text"><?php the_content() ?></div>
                             
+
+                  
                         </div><!--end of video_content_container-->
                         
                     </div>

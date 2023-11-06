@@ -14,9 +14,6 @@ Template Name: faq
 
     <div class="pages_content_container">
 
-
-
-
         <?php 
         $args = array(
         'category_name' => 'faq',

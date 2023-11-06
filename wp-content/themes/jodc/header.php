@@ -6,7 +6,7 @@
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> -->
 <meta charset="<?php bloginfo( 'charset' ); ?>"/>
 <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="pingback" href="<?php bloginfo('pingback url'); ?>" /> 
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
@@ -178,6 +178,12 @@
 <!-- nav-container end -->
 
 
+
+<!-- back to top button -->
+<a class="to-top-btn pointer-small _mPS2id-h" href="#up">
+      <span class="to-top-arrow"></span> 
+</a>
+<!-- backto top button end -->
 
 
 
