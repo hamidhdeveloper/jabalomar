@@ -351,7 +351,7 @@
 <!-- Award Section end-->
 
 <!-- Blog Section-->
-<!-- <div class="container-fluid blog-section" style=" padding: 0rem;">
+<div class="container-fluid blog-section" style=" padding: 0rem;">
    <div class="row blog-container">
     <div class="col-md-4 blog-box">
            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blogs/blog1.png"/>
@@ -387,7 +387,7 @@
         </div>
     </div>
    </div>
-</div> -->
+</div>
 <!-- Blog Section End-->
 
 

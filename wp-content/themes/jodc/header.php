@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html <?php language_attributes(); ?>>
+<html <?php  language_attributes(); ?> >
 <head>
 <!-- <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" /> -->
 <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> 
@@ -101,6 +101,8 @@
   <ul class="nav-menu dark-bg-1">
     <!-- nav-box start -->
     <?php
+    
+    // header('Content-Type: text/html; charset=utf-8');
     // Define the arguments for the menu
     $args = array(
         'theme_location' => 'main_menu',
@@ -112,7 +114,7 @@
 
     // Parse the menu HTML using a DOM parser
     $dom = new DOMDocument();
-    $dom->loadHTML($menu_html);
+    $dom->loadHTML(mb_convert_encoding($menu_html, 'HTML-ENTITIES', 'UTF-8'));
 
     // Get the list items from the menu
     $list_items = $dom->getElementsByTagName('li');

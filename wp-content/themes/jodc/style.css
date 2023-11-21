@@ -1207,10 +1207,9 @@ background-color: #9da07c;
 
 .blog-box {
   position: relative;
-  background-color: red;
   height: 20rem;
-  width: 26.5rem;
-  padding: 0rem;
+  width: 26.5rem !important;
+  padding: 0rem !important;
 }
 
 .blog-box img {
@@ -2333,4 +2332,84 @@ Message page
   /* line-height: 1rem; */
   font-weight: 200;
 
+}
+
+/*--------------------------------------------------------------
+Partner page
+--------------------------------------------------------------*/
+.partners-main{
+  position: relative;
+  background: radial-gradient(50% 50% at 50% 50%,
+      rgb(42.22, 66.51, 84.06) 0%,
+      rgb(42.22, 66.51, 84.06) 48.67%,
+      rgb(38, 56, 69) 96.55%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0rem;
+}
+.partner-top-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+.partner-left img{
+   height: 15rem;
+}
+.partner-right{
+  width: 30%;
+}
+.partner-right h1{
+  color: #ffffff;
+  font-family: "TanseekModernProArabic-Bold", Helvetica;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: left;
+  text-transform: uppercase;
+}
+.partner-right p{
+  height: 15rem;
+   font-size: 1rem;
+   text-align: justify;
+   color: white;
+   line-height: 1rem;
+   font-weight: 200;
+}
+.partner-img-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+}
+.partner-img-container:nth-child(2){
+  margin-top: 2rem;
+}
+.image-box-partner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.image-box-partner img{
+  height: 18rem;
+}
+.image-box-partner h5{
+  color: #ffffff;
+  font-family: "TanseekModernProArabic-Bold", Helvetica;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+
+}
+.image-box-partner p{
+  text-align: center;
+  color: white;
+  font-weight: 200;
 }

@@ -4,6 +4,14 @@
 @ini_set( 'max_execution_time', '300' );
 
 
+// character set code
+// function set_utf8_charset() {
+//   global $wpdb;
+//   $wpdb->charset = 'utf8';
+//   $wpdb->collate = 'utf8_general_ci';
+// }
+// add_action('init', 'set_utf8_charset');
+
 
 
 //navigation menus

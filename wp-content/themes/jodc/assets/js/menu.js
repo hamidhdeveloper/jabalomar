@@ -1,8 +1,8 @@
 
 jQuery(document).ready(function () {
   /* 6. Navigation open/close */
-  jQuery(".menu-outline").on("click", function () {
-    jQuery(".menu-outline, .nav-container").addClass("active");
+  jQuery(".menu-open, .menu-outline").on("click", function () {
+    jQuery(".menu-open, .menu-outline, .nav-container").addClass("active");
   });
 
   jQuery(".menu-close").on("click", function () {
