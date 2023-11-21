@@ -31,8 +31,16 @@
 <!-- my header start -->
 <!-- header start -->
 <header class="haeder">
+
+  <div class="search_holder ">
+    <form>
+      <input type="text" name="s" id="s" class="responsive_search" placeholder="<?php pll_e('serch_placeholder'); ?>" />
+      <span class="responsive_search_button"><i class="fas fa-search"></i></span>
+    </form>
+  </div><!--end of search holder-->
+
+
   <div class="midnightHeader default">
-   
       <!-- header-flex-box start -->
       <div class="container">
         <div class="header-flex-box">
@@ -58,7 +66,7 @@
             <?php wp_nav_menu($args);?>
             </div>
             <div class="search_container">
-              <i class="fas fa-search" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); color:var(--white)"></i>
+              <i class="fas fa-search"></i>
             </div>
             <!-- menu-open start -->
             <div class="menu-outline">
@@ -112,7 +120,7 @@
 
     // Parse the menu HTML using a DOM parser
     $dom = new DOMDocument();
-    $dom->loadHTML($menu_html);
+    $dom->loadHTML(mb_convert_encoding($menu_html, 'HTML-ENTITIES', 'UTF-8'));
 
     // Get the list items from the menu
     $list_items = $dom->getElementsByTagName('li');
@@ -130,7 +138,7 @@
             echo '<a class="pointer-large nav-link">';
             echo '<span class="nav-btn" data-text="' . $text . '">' . $text . '</span>';
             echo '</a>';
-            echo '<div class="nav-bg" style="background-image: url(http://localhost/jodc/wp-content/uploads/2023/10/blog1.png)" ></div>';
+            echo '<div class="nav-bg"></div>';
             // Add the sub-menu structure
             echo '<ul class="dropdown">';
             // Iterate over the sub-menu items
@@ -159,7 +167,7 @@
             echo '<a href="' . $href . '" class="pointer-large nav-link">';
             echo '<span class="nav-btn" data-text="' . $text . '">' . $text . '</span>';
             echo '</a>';
-            echo '<div class="nav-bg" style="background-image: url(http://localhost/jodc/wp-content/uploads/2023/10/blog1.png)" ></div>';
+            echo '<div class="nav-bg"></div>';
             echo '</li>';
         }
     }

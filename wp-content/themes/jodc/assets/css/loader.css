@@ -11,7 +11,7 @@
   height: 100%;
   position: fixed;
   top: 0;
-  z-index: 99;
+  z-index: 9999;
   background: #374c5f;
   -webkit-transition: 1s cubic-bezier(0.858, 0.01, 0.068, 0.99);
   -o-transition: 1s cubic-bezier(0.858, 0.01, 0.068, 0.99);
@@ -22,5 +22,3 @@
   width: 110px;
   height: auto;
 }
-
-

@@ -1,8 +1,7 @@
-
 jQuery(document).ready(function () {
   /* 6. Navigation open/close */
-  jQuery(".menu-outline").on("click", function () {
-    jQuery(".menu-outline, .nav-container").addClass("active");
+  jQuery(".menu-open, .menu-outline").on("click", function () {
+    jQuery(".menu-open, .menu-outline, .nav-container").addClass("active");
   });
 
   jQuery(".menu-close").on("click", function () {
@@ -21,10 +20,8 @@ jQuery(document).ready(function () {
     jQuery(".nav-link").removeClass("done");
     jQuery(".dropdown-close").removeClass("active");
   });
-
 });
 /* 8. Change menu background */
 jQuery(document).on("mouseover", ".nav-bg-change", function () {
   jQuery(this).addClass("active").siblings().removeClass("active");
 });
-

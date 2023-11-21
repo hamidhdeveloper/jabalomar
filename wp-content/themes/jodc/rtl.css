@@ -5,12 +5,29 @@ it's just a matter of overwriting all the horizontal positioning attributes
 of your CSS stylesheet in a separate stylesheet file named rtl.css.
 https://codex.wordpress.org/Right-to-Left_Language_Support
 */
-.main_header {
-  line-height: 80%;
+.search_container {
+  margin-left: 0px;
+  margin-right: 10px;
 }
 
-.slider_content {
-  line-height: 90%;
+.responsive_search {
+  text-align: right;
+}
+
+.main_header,
+.content1,
+.content2 {
+  line-height: 93%;
+}
+
+.slider_content,
+.contentpara,
+.contentpara2 {
+  line-height: 100%;
+}
+
+.progress_content_container .progress-h1 {
+  text-align: right;
 }
 
 @media only screen and (max-width: 1300px) {

@@ -1,5 +1,4 @@
-
-  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 4. Header
 --------------------------------------------------------------*/
 .fixed-header {
@@ -10,7 +9,6 @@
   z-index: 10;
   width: 100%;
   height: auto;
-  
 }
 
 .header-flex-box {
@@ -29,7 +27,6 @@
 .logo-img-box {
   position: relative;
   overflow: hidden;
-  
 }
 
 .logo img {
@@ -41,14 +38,12 @@
   transition: 0.5s cubic-bezier(0.767, 0.01, 0.18, 1.01);
 }
 
-
-
 /* 4.2. Header menu-open */
 .menu-open {
   width: 40px;
   height: 22px;
   margin-left: -2.1rem;
-    margin-top: -0.7rem;
+  margin-top: -0.7rem;
   -webkit-transform-origin: right;
   -ms-transform-origin: right;
   transform-origin: right;
@@ -268,9 +263,8 @@ body.active .menu-open:before {
   overflow: hidden;
   z-index: 3;
   cursor: pointer;
- 
 }
-.nav-logo a img{
+.nav-logo a img {
   height: 4rem;
 }
 
@@ -404,6 +398,8 @@ body.out .nav-container.active .menu-close:before {
   margin: 8px 0;
   padding: 0;
   overflow: hidden;
+  cursor: pointer;
+  direction: ltr;
 }
 
 /* 5.4. Navigation links */
@@ -747,6 +743,7 @@ a:hover .nav-btn:before {
   -webkit-transition: 0.9s cubic-bezier(0.767, 0.01, 0.18, 1.01);
   -o-transition: 0.9s cubic-bezier(0.767, 0.01, 0.18, 1.01);
   transition: 0.9s cubic-bezier(0.767, 0.01, 0.18, 1.01);
+  background-image: url(../images//slider_background.png);
 }
 
 .nav-bg-change.active .nav-bg {
@@ -848,7 +845,6 @@ body.out .nav-container.active .nav-menu:before {
 }
 
 .nav-link .nav-btn {
- 
   -webkit-transition: 1s cubic-bezier(0.767, 0.01, 0.18, 1.01);
   -o-transition: 1s cubic-bezier(0.767, 0.01, 0.18, 1.01);
   transition: 1s cubic-bezier(0.767, 0.01, 0.18, 1.01);
@@ -1322,54 +1318,50 @@ body.out .nav-container.active .dropdown-close.active {
 
 /* header logo animation */
 
-
 /* header css */
-.main-myheader{
-  -webkit-transition: all ease-out .5s;
-  -moz-transition: all ease-out .5s;
-  -o-transition: all ease-out .5s;
-  transition: all ease-out .5s;
+.main-myheader {
+  -webkit-transition: all ease-out 0.5s;
+  -moz-transition: all ease-out 0.5s;
+  -o-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
 }
 .headerbOnscroll {
-  background-color: rgba(34,34,34,0.8);
+  background-color: rgba(34, 34, 34, 0.8);
   top: 0rem !important;
 }
-.header{
+.header {
   /* border: 1px solid red; */
   margin-top: 2rem;
-} 
-.header div div{
+}
+.header div div {
   z-index: 1;
 }
 
-.header-right{
-    display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
-    align-items: center;
+.header-right {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
 }
-.language{
+.language {
   color: var(--white);
   font-weight: 500;
   font-size: 1.5rem;
   text-decoration-line: underline;
   text-decoration-color: var(--secondary);
-  
 }
-.language:hover{
+.language:hover {
   text-decoration-color: var(--white);
-  transition:0.25s ease-out;
+  transition: 0.25s ease-out;
 }
-.box3{
+.box3 {
   border-radius: 50%;
 }
-.menu-icon{
+.menu-icon {
   height: 1rem;
 }
 
-
-
-.menu-outline{
+.menu-outline {
   border: 2px solid transparent;
   padding: 2rem;
   height: 4rem;
@@ -1379,11 +1371,11 @@ body.out .nav-container.active .dropdown-close.active {
   cursor: pointer;
 }
 
-.menu-outline:hover{
+.menu-outline:hover {
   border-color: var(--white);
 }
 
-.search-icon{
+.search-icon {
   height: 1rem;
 }
 /* canvas menu language */

@@ -10,6 +10,9 @@
 register_nav_menus(array(
     'main_menu'=>__('main_menu'),
     'language_menu'=>__('language_menu'),
+    'footer_menu_one'=>__('footer_menu_one'),
+    'footer_menu_two'=>__('footer_menu_two'),
+    'footer_menu_three'=>__('footer_menu_three'),
   ));
   
 
@@ -147,30 +150,23 @@ return $content;
 
 //strings translations
 add_action('init', function() {
-  pll_register_string('learn_more_text', 'learn_more');
-  pll_register_string('footer_about_text', 'footer_about');
-  pll_register_string('staff_title_text', 'staff_title');
-  pll_register_string('news_title_text', 'news_title');
-  pll_register_string('services_title_text', 'services_title');
-  pll_register_string('activities_title_text', 'activities_title');
-  pll_register_string('accreditations_title_text', 'accreditations_title');
-  pll_register_string('footer_location_text', 'footer_location');
-  pll_register_string('footer_phone_text', 'footer_phone');
+  pll_register_string('serch_placeholder_text', 'serch_placeholder');
+  pll_register_string('view_more_text', 'view_more');
+  pll_register_string('home_hotels_title_text', 'home_hotels_title');
+  pll_register_string('home_hotels_subtitle_text', 'home_hotels_subtitle');
+  pll_register_string('home_malls_subtitle_text', 'home_malls_subtitle');
+  pll_register_string('home_malls_title_text', 'home_malls_title');
+  pll_register_string('home_awards_title_text', 'home_awards_title');
+  pll_register_string('home_awards_subtitle_text', 'home_awards_subtitle');
+  pll_register_string('home_news_title_text', 'home_news_title');
+  pll_register_string('footer_address_one_text', 'footer_address_one');
+  pll_register_string('footer_address_two_text', 'footer_address_two');
   pll_register_string('footer_email_text', 'footer_email');
-  pll_register_string('wiget_one_text', 'wiget_one');
-  pll_register_string('wiget_two_text', 'wiget_two');
-  pll_register_string('wiget_three_text', 'wiget_three');
-  pll_register_string('wiget_four_text', 'wiget_four');
-  pll_register_string('about_text', 'about');
-  pll_register_string('move_name_text', 'move_name');
-  pll_register_string('partners_text', 'partners');
-
-  pll_register_string('call_title_text','call_title');
-  pll_register_string('call_number_text','call_number');
-  pll_register_string('email_title_text','email_title');
-  pll_register_string('email_info_text','email_info');
-  pll_register_string('location_title_text','location_title');
-  pll_register_string('location_info_text','location_info');
+  pll_register_string('footer_phone_text', 'footer_phone');
+  pll_register_string('footer_menu_one_text', 'footer_menu_one');
+  pll_register_string('footer_menu_two_text', 'footer_menu_two');
+  pll_register_string('footer_menu_three_text', 'footer_menu_three');
+  pll_register_string('rights_text', 'rights');
 });
 
 

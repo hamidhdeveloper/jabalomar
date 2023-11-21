@@ -1,78 +1,88 @@
-<?php
-                    // $args = array(
-                    // 'theme_location'=>'footer_menu_one'
-                    // );
-                    ?>
-                    <?php //wp_nav_menu($args);?>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
 
-                    <div class="container-fluid footer" style=" padding: 0rem; ">
-        <div class="container footer-container">
-              <div class="row">
-                <div class="col-md-4 footer-logo-first-col">
-                    <div class="footerlogo-left">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-light.png">
-                    </div>
-                    <div class="footerlogo-right">
-                      <p>1418 River Drive, Suite 35 <br/> Cottonhall, CA 9622</p>
-                      <p><a href="#">sale@jodc.com</a></p>
-                      <p><a href="#">+1 246-345-0695</a></p>
-                      <div class="social-icons">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/social/facebook.svg" />
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/social/twitter.svg" />
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/social/instagram.svg" />
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/social/youtube.svg" />
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/social/pinterest.svg" />
-                      </div>
-                    </div>
-                </div>
-                <div class="col-md-3 ">
-                  <h6>COMPANY</h6>
-                  <ul class="footer-col-2">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Affilliates</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-3">
-                  <h6>SHOP</h6>
-                  <ul class="footer-col-2">
-                    <li><a href="#">New Arrivals</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">Shop All</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-2">
-                  <h6>HELP</h6>
-                  <ul class="footer-col-2">
-                    <li><a href="#">Customer Service </a></li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">Find a Store</a></li>
-                    <li><a href="#">Legal & Privacy</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Gift Card</a></li>
-                  </ul>
-                </div>
-              </div>
-        </div>
+      <div class="col-md-4 col-ms-6">
+        <div class="footer_logo_container">
+          <img class="footerlogo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-light.png">
+          <div class="footer_logo_content_container">
+
+            <div class="footer_logo_conntent_top">
+              <p><a target="_blank" href=""><?php pll_e('footer_address_one'); ?></a></p>
+              <p><a target="_blank" href=""><?php pll_e('footer_address_two'); ?></a></p>
+            </div><!--end of footer_logo_conntent_top-->
+
+            <div class="footer_logo_conntent_bottom">
+              <p><a href="mailto:info@jodc.com.sa"><?php pll_e('footer_email'); ?></a></p>
+              <p style="direction: ltr"><a href="tel:+966125106100"><?php pll_e('footer_phone'); ?></a></p>
+            </div><!--end of footer_logo_conntent_bottom-->
+
+          </div><!--endn of footer_logo_content_container-->
+        </div><!--end of footer_logo_container-->
+        <div class="footer_social_media_container">
+          <a href="" taget="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="" taget="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="" taget="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="" taget="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="" taget="_blank"><i class="fab fa-instagram-square"></i></a>
+        </div><!--end of footer_social_media_container-->
+      </div><!--end of col-->
+
+
+      <div class="col-md-3 col-ms-6">
+        <div class="footer_menu_container">
+          <h4><?php pll_e('footer_menu_one') ?></h4>
+          <?php
+            $args = array(
+            'theme_location'=>'footer_menu_one'
+            );
+            ?>
+          <?php wp_nav_menu($args);?>
+        </div><!--end of footer_menu_container-->
+      </div><!--end of col-->
 
 
 
-        <hr style="opacity: 1;"/>
-        <div class="container">
-          <p class="copyright-text">©2023 JODC</p>
-        </div>
-         </div>
+      <div class="col-md-3 col-ms-6">
+        <div class="footer_menu_container">
+          <h4><?php pll_e('footer_menu_two') ?></h4>
+          <?php
+            $args = array(
+            'theme_location'=>'footer_menu_two'
+            );
+            ?>
+          <?php wp_nav_menu($args);?>
+        </div><!--end of footer_menu_container-->
+      </div><!--end of col-->
+
+
+      <div class="col-md-2 col-ms-6">
+        <div class="footer_menu_container">
+          <h4><?php pll_e('footer_menu_three') ?></h4>
+          <?php
+            $args = array(
+            'theme_location'=>'footer_menu_three'
+            );
+            ?>
+          <?php wp_nav_menu($args);?>
+        </div><!--end of footer_menu_container-->
+      </div><!--end of col-->
+
+
+      <div class="rights_container">
+        <?php pll_e('rights') ?> <?php echo date('Y');?>
+      </div><!--end of rights_container-->
+
+    </div><!--end of row-->
+
+  </div><!--end of container-->
+
+
+</footer><!--end of footer-->
 
 
 
 
-<?php wp_footer(); ?>
-
-  </div>    <!-- Flex container end-->
 
   <script>
     const slider = document.querySelector(".slider-inner");
@@ -131,5 +141,7 @@
       }
 
   </script>
+
+<?php wp_footer(); ?>
 </body>
 </html>

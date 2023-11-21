@@ -14,22 +14,20 @@ jQuery(document).ready(function () {
       "-ms-transform": "translateY(0)",
       transform: "translateY(0)",
     });
-  }, 700); // 2000 milliseconds = 2 seconds
+  }, 1000); // 2000 milliseconds = 2 seconds
 
   ////////////////fill text animation start//////////////////////////////////////
   setTimeout(function () {
     jQuery(".myfill-title").css({
-      'background-position': '0',
+      "background-position": "0",
     });
   }, 900); // 2000 milliseconds = 2 seconds
 
   setTimeout(function () {
     jQuery(".myfill-text").css({
-      'background-position': '0',
+      "background-position": "0",
     });
   }, 1100); // 2000 milliseconds = 2 seconds
-
-
 
   ////////////////////fill text animation end/////////////////////////////
 
@@ -93,214 +91,184 @@ jQuery(document).ready(function () {
     });
   }
 
-// my jquery start here
+  // my jquery start here
 
+  //   onscroll apply background to header
 
-
-//   onscroll apply background to header 
-
-$(window).on("scroll", function() {
-    if($(window).scrollTop() > 50) {
-        $(".main-myheader").addClass("headerbOnscroll");
-        
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() > 50) {
+      $(".main-myheader").addClass("headerbOnscroll");
     } else {
-        //remove the background property so it comes transparent again (defined in your css)
-       $(".main-myheader").removeClass("headerbOnscroll");
-    }
-});
-
-// Onscroll back to top button to be hide
-$(".to-top-btn").addClass("mPS2id-highlight");
-$(window).on("scroll", function() {
-  if($(window).scrollTop() < 90) {
-      $(".to-top-btn").addClass("mPS2id-highlight");
-  } else {
       //remove the background property so it comes transparent again (defined in your css)
-     $(".to-top-btn").removeClass("mPS2id-highlight");
-  }
-});
-
-
-
-
-
-
-
-
-// inview scroll animation
-// ********** for overlay text animations  *******************
-jQuery(".overlay-text-animation").bind("inview", function (event, visible) {
-  if (visible == true) {
-    $(".overlay-loading1").addClass("translateX-110");
-  }
-});
-/***********  logos images overlay animation -------------*/ 
-jQuery(".partner-main-container").bind("inview", function (event, visible) {
-if (visible == true) {
-  $(".sectors_thumnails_overlay").addClass("slide_amimation_time15_delay05");
-}
-});
-
-
-/***********  logos images overlay animation -------------*/ 
-jQuery(".partner-main-container").bind("inview", function (event, visible) {
-if (visible == true) {
-  $(".sectors_thumnails_overlay").addClass("slide_amimation_time15_delay05");
-}
-});
-
-
-/***********  contert para section animation -------------*/ 
-jQuery(".contentpara").bind("inview", function (event, visible) {
-  if (visible == true) {
-    $(".contentpara").addClass("fade-anim");
-  }
-  });
-  
-/***********  counter section animation -------------*/ 
-jQuery(".contentpara2").bind("inview", function (event, visible) {
-if (visible == true) {
-  $(".contentpara2").addClass("fade-anim");
-}
-});
-
-/***********  award section animation -------------*/ 
-jQuery(".item-award").bind("inview", function (event, visible) {
-  if (visible == true) {
-    $(".item-award img").addClass("fade-anim");
-    $(".item-award p").addClass("fade-anim");
-  }
+      $(".main-myheader").removeClass("headerbOnscroll");
+    }
   });
 
-
-/***********  progress bar animation -------------*/ 
-jQuery(".progress-bar-all").bind("inview", function (event, visible) {
-  if (visible == true) {
-    $(".progress-full").addClass("slide-progress");
-  }
+  // Onscroll back to top button to be hide
+  $(".to-top-btn").addClass("mPS2id-highlight");
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() < 90) {
+      $(".to-top-btn").addClass("mPS2id-highlight");
+    } else {
+      //remove the background property so it comes transparent again (defined in your css)
+      $(".to-top-btn").removeClass("mPS2id-highlight");
+    }
   });
 
-  /***********  partner-content-para animation -------------*/ 
-jQuery(".partner-content-para").bind("inview", function (event, visible) {
-  if (visible == true) {
-    $(".partner-content-para").addClass("fade-anim");
-  }
+  // inview scroll animation
+  // ********** for overlay text animations  *******************
+  jQuery(".overlay-text-animation").bind("inview", function (event, visible) {
+    if (visible == true) {
+      $(".overlay-loading1").addClass("translateX-110");
+    }
   });
-/***********  all title filling animation -------------*/ 
-jQuery(".content2").bind("inview", function (event, visible) {
-  if (visible == true) {
+  /***********  logos images overlay animation -------------*/
+  jQuery(".sectors_thumnails_overlay").bind(
+    "inview",
+    function (event, visible) {
+      if (visible == true) {
+        jQuery(this).addClass("slide_amimation_time15_delay05");
+      }
+    }
+  );
 
-    setTimeout(function () {
-      jQuery(".myfill-title-invert").css({
-        'background-position': '0',
-      });
-    }, 1000); // 2000 milliseconds = 2 seconds
+  /***********  contert para section animation -------------*/
+  jQuery(".contentpara").bind("inview", function (event, visible) {
+    if (visible == true) {
+      $(".contentpara").addClass("fade-anim");
+    }
+  });
 
-  }
+  /***********  counter section animation -------------*/
+  jQuery(".contentpara2").bind("inview", function (event, visible) {
+    if (visible == true) {
+      $(".contentpara2").addClass("fade-anim");
+    }
+  });
+
+  /***********  award section animation -------------*/
+  jQuery(".item-award").bind("inview", function (event, visible) {
+    if (visible == true) {
+      $(".item-award img").addClass("fade-anim");
+      $(".item-award p").addClass("fade-anim");
+    }
+  });
+
+  /***********  progress bar animation -------------*/
+  jQuery(".progress-bar-all").bind("inview", function (event, visible) {
+    if (visible == true) {
+      $(".progress-full").addClass("slide-progress");
+    }
+  });
+
+  /***********  partner-content-para animation -------------*/
+  jQuery(".partner-content-para").bind("inview", function (event, visible) {
+    if (visible == true) {
+      $(".partner-content-para").addClass("fade-anim");
+    }
+  });
+  /***********  all title filling animation -------------*/
+  jQuery(".content2").bind("inview", function (event, visible) {
+    if (visible == true) {
+      setTimeout(function () {
+        jQuery(".myfill-title-invert").css({
+          "background-position": "0",
+        });
+      }, 1000); // 2000 milliseconds = 2 seconds
+    }
   });
 
   jQuery(".progress-h1").bind("inview", function (event, visible) {
     if (visible == true) {
-  
       setTimeout(function () {
         jQuery(".myfill-title-invert").css({
-          'background-position': '0',
+          "background-position": "0",
         });
       }, 1000); // 2000 milliseconds = 2 seconds
-  
     }
-    });
+  });
 
-    jQuery(".paterner-content").bind("inview", function (event, visible) {
-      if (visible == true) {
-    
-        setTimeout(function () {
-          jQuery(".myfill-title-invert").css({
-            'background-position': '0',
-          });
-        }, 2000); // 2000 milliseconds = 2 seconds
-    
-      }
+  jQuery(".paterner-content").bind("inview", function (event, visible) {
+    if (visible == true) {
+      setTimeout(function () {
+        jQuery(".myfill-title-invert").css({
+          "background-position": "0",
+        });
+      }, 1000); // 2000 milliseconds = 2 seconds
+    }
+  });
+
+  jQuery(".award-title").bind("inview", function (event, visible) {
+    if (visible == true) {
+      setTimeout(function () {
+        jQuery(".myfill-title-invert").css({
+          "background-position": "0",
+        });
+      }, 2000); // 2000 milliseconds = 2 seconds
+    }
+  });
+
+  /***********  counter section animation -------------*/
+  jQuery(".content2iconboxes").bind("inview", function (event, visible) {
+    if (visible == true) {
+      //javascript
+      // for counter animation
+
+      let valueDisplays = document.querySelectorAll(".num");
+      let interval = 4000;
+
+      valueDisplays.forEach((valueDisplay) => {
+        let startValue = 0;
+        let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+        let duration = Math.floor(interval / endValue);
+        let counter = setInterval(function () {
+          startValue += 1;
+          valueDisplay.textContent = startValue;
+          if (startValue == endValue) {
+            clearInterval(counter);
+          }
+        }, duration);
       });
 
-      
-    jQuery(".award-title").bind("inview", function (event, visible) {
-      if (visible == true) {
-    
-        setTimeout(function () {
-          jQuery(".myfill-title-invert").css({
-            'background-position': '0',
-          });
-        }, 2000); // 2000 milliseconds = 2 seconds
-    
+      // javascript
+    }
+  });
+
+  //line animation
+  jQuery(".line").bind("inview", function (event, visible) {
+    if (visible == true) {
+      jQuery(this).addClass("line_animation");
+    } else {
+      jQuery(this).removeClass("line_animation");
+    }
+  });
+
+  //malls overlay animation
+  setTimeout(function () {
+    jQuery(".malls_overlay_animation").bind(
+      "inview",
+      function (event, visible) {
+        if (visible == true) {
+          jQuery(this).addClass("overlay_animation");
+        }
+        // else {
+        //   jQuery(this).removeClass("overlay_animation");
+        // }
       }
-      });
-
-  
-
-
-
-/***********  counter section animation -------------*/ 
-jQuery(".content2iconboxes").bind("inview", function (event, visible) {
-if (visible == true) {
-  //javascript
-   // for counter animation
-   
-   let valueDisplays = document.querySelectorAll(".num");
-   let interval = 4000;
-   
-   valueDisplays.forEach((valueDisplay) => {
-     let startValue = 0;
-     let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-     let duration = Math.floor(interval / endValue);
-     let counter = setInterval(function () {
-       startValue +=1;
-       valueDisplay.textContent = startValue;
-       if (startValue == endValue) {
-         clearInterval(counter);
-       }
-     }, duration);
-   });
-
-
-  // javascript
-}
-});
-
-// my jquery end here
-
-
-
-
-});
-
-jQuery(window).scroll(function () {
-  if (jQuery(this).scrollTop() > 150) {
-    jQuery(".main_menu_main_container").addClass(
-      "main_menu_main_container_fixed"
     );
-    jQuery(".main_menu_main_container").addClass(
-      "animate__animated animate__fadeInDown"
-    );
-  } else {
-    jQuery(".main_menu_main_container").removeClass(
-      "main_menu_main_container_fixed"
-    );
-    jQuery(".main_menu_main_container").removeClass(
-      "animate__animated animate__fadeInDown"
-    );
-  }
+  }, 1000);
+
+  /********hide and show search script********/
+  jQuery(".search_container").on("click", function (e) {
+    jQuery(".search_holder").toggleClass("search_holder_show");
+    e.preventDefault();
+  });
 });
 
 jQuery(window).scroll(function () {
   if (jQuery(this).scrollTop() > 300) {
-    jQuery(".side_socila_media").addClass("side_socila_media_scroll");
+    jQuery(".haeder").addClass("haeder_scroll");
   } else {
-    jQuery(".side_socila_media").removeClass("side_socila_media_scroll");
+    jQuery(".haeder").removeClass("haeder_scroll");
   }
 });
-
-
-
-
-        
