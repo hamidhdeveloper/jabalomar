@@ -1,1 +1,65 @@
-hello world
+# Jabal Omar Development Company (JODC) Local Development Setup
+
+This guide will help you set up a local development environment for Jabal Omar Development Company (JODC) using XAMPP and WordPress.
+
+## Prerequisitess
+
+Before getting started, ensure that you have the following:
+
+- [XAMPP](https://www.apachefriends.org/index.html) installed on your local machine.
+- [WordPress](https://wordpress.org/download/) files downloaded and ready.
+- JODC database access credentials:
+  - **Username**: mohjel369@hotmail.com
+  - **Password**: 12341234
+
+## Installation Steps
+
+1. **Install XAMPP**:
+
+   - Download and install XAMPP by following the instructions on the official website.
+
+2. **Start XAMPP**:
+
+   - Launch XAMPP and start the Apache and MySQL services.
+
+3. **Set Up WordPress**:
+
+   - Move the WordPress files to the `htdocs` folder in your XAMPP installation directory (usually `C:\xampp\htdocs` on Windows or `/Applications/XAMPP/htdocs` on macOS).
+
+   - Rename the `wp-config-sample.php` file in the WordPress directory to `wp-config.php`.
+
+   - Edit `wp-config.php` and configure the database connection with the following information:
+
+     ```php
+     define('DB_NAME', 'your_database_name'); // Use the database name provided by JODC.
+     define('DB_USER', 'mohjel369@hotmail.com');
+     define('DB_PASSWORD', '12341234');
+     define('DB_HOST', 'localhost');
+     ```
+
+   - Save the `wp-config.php` file.
+
+4. **Create a Database**:
+
+   - Open your web browser and navigate to `http://localhost/phpmyadmin`.
+
+   - Log in using the XAMPP credentials (usually no username and an empty password).
+
+   - Create a new database with the name provided by JODC.
+
+5. **Install WordPress**:
+
+   - Open your web browser and navigate to `http://localhost/your-wordpress-folder` (replace `your-wordpress-folder` with the actual folder name).
+
+   - Follow the WordPress installation wizard, entering the required information.
+
+6. **Access Your Local JODC Website**:
+
+   - You can now access your local JODC website by navigating to `http://localhost/your-wordpress-folder`.
+
+## Contact
+
+If you encounter any issues or have questions, please feel free to reach out to our support team at support@jodc.com.
+
+Happy local development!
+

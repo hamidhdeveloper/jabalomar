@@ -117,9 +117,9 @@ jQuery(document).ready(function () {
 
   // inview scroll animation
   // ********** for overlay text animations  *******************
-  jQuery(".overlay-text-animation").bind("inview", function (event, visible) {
+  jQuery(".content-overlay, .malls-overlay").bind("inview", function (event, visible) {
     if (visible == true) {
-      $(".overlay-loading1").addClass("translateX-110");
+      $(this).addClass("translateX-110");
     }
   });
   /***********  logos images overlay animation -------------*/
@@ -133,18 +133,12 @@ jQuery(document).ready(function () {
   );
 
   /***********  contert para section animation -------------*/
-  jQuery(".contentpara").bind("inview", function (event, visible) {
+  jQuery(".contentpara,.contentpara2,.blog-label,.partner-content-para").bind("inview", function (event, visible) {
     if (visible == true) {
-      $(".contentpara").addClass("fade-anim");
+      $(this).addClass("fade-anim");
     }
   });
 
-  /***********  counter section animation -------------*/
-  jQuery(".contentpara2").bind("inview", function (event, visible) {
-    if (visible == true) {
-      $(".contentpara2").addClass("fade-anim");
-    }
-  });
 
   /***********  award section animation -------------*/
   jQuery(".item-award").bind("inview", function (event, visible) {
@@ -154,6 +148,7 @@ jQuery(document).ready(function () {
     }
   });
 
+
   /***********  progress bar animation -------------*/
   jQuery(".progress-bar-all").bind("inview", function (event, visible) {
     if (visible == true) {
@@ -161,17 +156,12 @@ jQuery(document).ready(function () {
     }
   });
 
-  /***********  partner-content-para animation -------------*/
-  jQuery(".partner-content-para").bind("inview", function (event, visible) {
-    if (visible == true) {
-      $(".partner-content-para").addClass("fade-anim");
-    }
-  });
+
   /***********  all title filling animation -------------*/
   jQuery(".content2").bind("inview", function (event, visible) {
     if (visible == true) {
       setTimeout(function () {
-        jQuery(".myfill-title-invert").css({
+        jQuery(".content2").css({
           "background-position": "0",
         });
       }, 1000); // 2000 milliseconds = 2 seconds
@@ -181,30 +171,41 @@ jQuery(document).ready(function () {
   jQuery(".progress-h1").bind("inview", function (event, visible) {
     if (visible == true) {
       setTimeout(function () {
-        jQuery(".myfill-title-invert").css({
+        jQuery(".progress-h1").css({
           "background-position": "0",
         });
       }, 1000); // 2000 milliseconds = 2 seconds
     }
   });
-
-  jQuery(".paterner-content").bind("inview", function (event, visible) {
-    if (visible == true) {
-      setTimeout(function () {
-        jQuery(".myfill-title-invert").css({
-          "background-position": "0",
-        });
-      }, 1000); // 2000 milliseconds = 2 seconds
-    }
-  });
+// headings animation
+    
+    jQuery(".paterner-content").bind("inview", function (event, visible) {
+      if (visible == true) {
+        setTimeout(function () {
+          jQuery(".paterner-content").css({
+            "background-position": "0",
+          });
+        }, 1000); // 2000 milliseconds = 2 seconds
+      }
+    });
 
   jQuery(".award-title").bind("inview", function (event, visible) {
     if (visible == true) {
       setTimeout(function () {
-        jQuery(".myfill-title-invert").css({
+        jQuery(".award-title").css({
           "background-position": "0",
         });
-      }, 2000); // 2000 milliseconds = 2 seconds
+      }, 1000); // 2000 milliseconds = 2 seconds
+    }
+  });
+
+  jQuery(".myblog-title").bind("inview", function (event, visible) {
+    if (visible == true) {
+      setTimeout(function () {
+        jQuery(".myblog-title").css({
+          "background-position": "0",
+        });
+      }, 1000); // 2000 milliseconds = 2 seconds
     }
   });
 

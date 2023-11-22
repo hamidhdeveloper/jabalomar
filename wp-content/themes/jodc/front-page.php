@@ -63,7 +63,7 @@
           <div class="col-md-12">
                <div class="container content-container">
                 <div class="overlay-text-animation">
-                  <div class="overlay-loading1"></div>
+                  <div class="overlay-loading1 content-overlay"></div>
                 <h1 class="content1">
                   <span><?php the_title();?></span>
                 </h1>
@@ -370,7 +370,11 @@
 <div class="home_malls_container">
   <div class="home_malls_section home_malls_title_section">
     <div class="home_malls_subtitle"><?php pll_e('home_malls_subtitle'); ?></div>
+    <!-- animated title start -->
+    <div class="overlay-text-animation">
+       <div class="overlay-loading1 malls-overlay" style="background: var(--primary)"></div>
     <div class="home_malls_title"><?php pll_e('home_malls_title'); ?></div>
+      </div> <!-- animated title end -->
     <div class="line" style="margin: 40px 0px 30px 0px"></div>
   </div>
 
@@ -461,7 +465,7 @@
   <div class="container">
     <div class="row">
 
-      <h1 class="award-title myfill-title-invert" style="padding: 0px; text-align: center;"><?php pll_e('home_news_title');?></h1>
+      <h1 class="myblog-title myfill-title-invert" style="padding: 0px; text-align: center;"><?php pll_e('home_news_title');?></h1>
 
       <?php 
       $args = array(
@@ -476,10 +480,11 @@
       <div class="col-lg-4 col-md-4 col-sm-12">
         <a class="news_container" href="<?php the_permalink(); ?>">
           <div class="news_image_container">
+            <div class="malls_overlay_animation"></div>
             <img class="blog-image" src="<?php the_post_thumbnail_url(); ?>"/>
           </div>
           <div class="line" style="background-color: #9da07c;"></div>
-          <div class="blog-label"><?php the_title(); ?></div>
+          <div class="blog-label fade-anim-box"><?php the_title(); ?></div>
         </a><!--end of news_container-->
       </div>
 
@@ -488,8 +493,10 @@
       endif;?>
 
       <div class="arrow-btn-box slider-fade slider-tr-delay06 top-margin-30" style="margin-top: 20px; display: flex; justify-content: center; align-items: center;">
-        <a href="" class="arrow-btn pointer-large"><?php pll_e('view_more') ?></a>
+        <a href="" class="arrow-btn pointer-large" style="position:relative"><?php pll_e('view_more') ?></a>
       </div>
+  
+      
 
     </div><!--end of row-->
   </div><!--end of container-->

@@ -29,6 +29,9 @@ https://codex.wordpress.org/Right-to-Left_Language_Support
 .progress_content_container .progress-h1 {
   text-align: right;
 }
+.menu-open {
+  margin-right: -0.4rem;
+}
 
 @media only screen and (max-width: 1300px) {
 }
