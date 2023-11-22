@@ -526,7 +526,7 @@ body.anim .scroll-arrow-box {
 /* scroll down animation end */
 /* logos images overlay animation */
 .slide_amimation_time15_delay05 {
-  animation: slideAnim 1s cubic-bezier(0.85, 0, 0.15, 1) 1.5s 1 normal forwards;
+  animation: slideAnim 3s cubic-bezier(0.85, 0, 0.15, 1) 0.2s 1 normal forwards;
 }
 @keyframes slideAnim {
   0% {
@@ -546,6 +546,7 @@ body.anim .scroll-arrow-box {
   position: absolute;
   top: 0;
   left: 0;
+
 }
 
 /* for progress bar animation */
@@ -1249,7 +1250,16 @@ justify-content: center;
   text-transform: uppercase;
   padding: 3rem 0rem;
 }
-
+.myblog-title {
+  color: #000;
+  font-family: "TanseekModernProArabic-Bold", Helvetica;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 3rem 0rem;
+}
 .slider-award {
   position: absolute;
   top: 0;
@@ -1346,6 +1356,7 @@ justify-content: center;
   height: 200px;
   overflow: hidden;
   margin: 10px 0px;
+  position: relative;
 }
 
 .blog-image {
