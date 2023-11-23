@@ -330,30 +330,32 @@
       </p>
 
 
-      <ul class="home_clients_thumnails">
+      <div class="home_clients_thumnails_container">
+        <ul class="home_clients_thumnails">
 
-        <?php 
-        $args = array(
-        'category_name' => 'hotels',
-        );
-        $arr_posts = new WP_Query( $args );
-        if ( $arr_posts->have_posts() ) :
-        while ( $arr_posts->have_posts() ) :
-        $arr_posts->the_post();
-        ?> 
+          <?php 
+          $args = array(
+          'category_name' => 'hotels',
+          );
+          $arr_posts = new WP_Query( $args );
+          if ( $arr_posts->have_posts() ) :
+          while ( $arr_posts->have_posts() ) :
+          $arr_posts->the_post();
+          ?> 
 
-        <li class="home_clients_thumnails_single">
-          <a href="" class="home_clients_unchr">
-          <div class="sectors_thumnails_overlay"></div>
-          <img src="<?php the_post_thumbnail_url(); ?>"/>
-          </a>
-        </li>
+          <li class="home_clients_thumnails_single">
+            <a href="" class="home_clients_unchr">
+            <div class="sectors_thumnails_overlay"></div>
+            <img src="<?php the_post_thumbnail_url(); ?>"/>
+            </a>
+          </li>
 
-        <?php
-        endwhile;
-        endif;?>
+          <?php
+          endwhile;
+          endif;?>
 
-      </ul>
+        </ul>
+      </div><!--end of home_clients_thumnails-->
 
 
     </div><!--end of row-->

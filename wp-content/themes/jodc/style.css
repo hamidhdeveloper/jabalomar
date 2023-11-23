@@ -546,7 +546,6 @@ body.anim .scroll-arrow-box {
   position: absolute;
   top: 0;
   left: 0;
-
 }
 
 /* for progress bar animation */
@@ -996,6 +995,7 @@ justify-content: center;
   letter-spacing: 0;
   line-height: normal;
   text-transform: uppercase;
+  line-height: 70%;
 }
 
 .partner-content-para {
@@ -1024,6 +1024,9 @@ justify-content: center;
   height: auto;
   padding: 140px 0px;
 }
+.home_clients_thumnails_container {
+  padding: 0px 150px !important;
+}
 
 .home_clients_thumnails {
   margin: 0;
@@ -1039,7 +1042,7 @@ justify-content: center;
 .home_clients_thumnails_single {
   width: 25%;
   margin: 0;
-  padding: 20px 20px;
+  padding: 40px 20px;
   list-style: none;
   border-left: 1px solid #231f20;
   border-top: 1px solid #231f20;
@@ -1109,6 +1112,7 @@ justify-content: center;
   font-family: "TanseekModernProArabic-Light";
   color: var(--primary);
   font-size: 2rem;
+  line-height: 70%;
 }
 
 .home_malls_title {
@@ -1249,6 +1253,7 @@ justify-content: center;
   line-height: normal;
   text-transform: uppercase;
   padding: 3rem 0rem;
+  line-height: 70%;
 }
 .myblog-title {
   color: #000;
@@ -1366,7 +1371,7 @@ justify-content: center;
 }
 
 .news_container:hover .blog-image {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .blog-label {
@@ -2334,6 +2339,17 @@ Partners page
   .progress_content_container {
     position: static;
   }
+
+  .home_clients_thumnails_container {
+    padding: 0px 0px !important;
+  }
+  .home_malls_content_container h2 {
+    font-size: 1.5rem;
+  }
+  .award-progress-bar {
+    width: 80%;
+    margin: 0rem 10%;
+  }
 }
 
 @media only screen and (max-width: 720px) {
@@ -2348,5 +2364,38 @@ Partners page
 
   .progress_content_container {
     position: static;
+  }
+
+  .home_clients_thumnails_single {
+    width: 50%;
+  }
+
+  .home_clients_thumnails li:nth-child(3),
+  .home_clients_thumnails li:nth-child(4) {
+    border-top: 1px solid #231f20;
+  }
+
+  .home_clients_thumnails li:nth-child(2n + 1) {
+    border-left: none;
+  }
+
+  .footer_menu_container {
+    margin-top: 20px;
+  }
+
+  .home_malls_container {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .award-progress-bar {
+    width: 70%;
+    margin: 0rem 15%;
+  }
+  .search_container {
+    width: 30px;
+    margin-left: 0px;
+  }
+  .menu-outline {
+    width: auto;
   }
 }

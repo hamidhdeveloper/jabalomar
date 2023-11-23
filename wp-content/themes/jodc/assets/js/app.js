@@ -117,11 +117,14 @@ jQuery(document).ready(function () {
 
   // inview scroll animation
   // ********** for overlay text animations  *******************
-  jQuery(".content-overlay, .malls-overlay").bind("inview", function (event, visible) {
-    if (visible == true) {
-      $(this).addClass("translateX-110");
+  jQuery(".content-overlay, .malls-overlay").bind(
+    "inview",
+    function (event, visible) {
+      if (visible == true) {
+        $(this).addClass("translateX-110");
+      }
     }
-  });
+  );
   /***********  logos images overlay animation -------------*/
   jQuery(".sectors_thumnails_overlay").bind(
     "inview",
@@ -133,12 +136,14 @@ jQuery(document).ready(function () {
   );
 
   /***********  contert para section animation -------------*/
-  jQuery(".contentpara,.contentpara2,.blog-label,.partner-content-para").bind("inview", function (event, visible) {
-    if (visible == true) {
-      $(this).addClass("fade-anim");
+  jQuery(".contentpara,.contentpara2,.blog-label,.partner-content-para").bind(
+    "inview",
+    function (event, visible) {
+      if (visible == true) {
+        $(this).addClass("fade-anim");
+      }
     }
-  });
-
+  );
 
   /***********  award section animation -------------*/
   jQuery(".item-award").bind("inview", function (event, visible) {
@@ -148,14 +153,12 @@ jQuery(document).ready(function () {
     }
   });
 
-
   /***********  progress bar animation -------------*/
   jQuery(".progress-bar-all").bind("inview", function (event, visible) {
     if (visible == true) {
       $(".progress-full").addClass("slide-progress");
     }
   });
-
 
   /***********  all title filling animation -------------*/
   jQuery(".content2").bind("inview", function (event, visible) {
@@ -177,17 +180,17 @@ jQuery(document).ready(function () {
       }, 1000); // 2000 milliseconds = 2 seconds
     }
   });
-// headings animation
-    
-    jQuery(".paterner-content").bind("inview", function (event, visible) {
-      if (visible == true) {
-        setTimeout(function () {
-          jQuery(".paterner-content").css({
-            "background-position": "0",
-          });
-        }, 1000); // 2000 milliseconds = 2 seconds
-      }
-    });
+  // headings animation
+
+  jQuery(".paterner-content").bind("inview", function (event, visible) {
+    if (visible == true) {
+      setTimeout(function () {
+        jQuery(".paterner-content").css({
+          "background-position": "0",
+        });
+      }, 1000); // 2000 milliseconds = 2 seconds
+    }
+  });
 
   jQuery(".award-title").bind("inview", function (event, visible) {
     if (visible == true) {
@@ -257,7 +260,7 @@ jQuery(document).ready(function () {
         // }
       }
     );
-  }, 1000);
+  }, 2000);
 
   /********hide and show search script********/
   jQuery(".search_container").on("click", function (e) {
