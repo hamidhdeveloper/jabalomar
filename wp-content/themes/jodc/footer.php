@@ -81,9 +81,6 @@
 </footer><!--end of footer-->
 
 
-
-
-
   <script>
     const slider = document.querySelector(".slider-inner");
       const progressBar = document.querySelector(".prog-bar-inner");
