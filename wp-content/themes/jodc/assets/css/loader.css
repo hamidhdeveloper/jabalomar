@@ -12,7 +12,7 @@
   position: fixed;
   top: 0;
   z-index: 9999;
-  background: black;
+  background:var(--primary);
   -webkit-transition: 1s cubic-bezier(0.858, 0.01, 0.068, 0.99);
   -o-transition: 1s cubic-bezier(0.858, 0.01, 0.068, 0.99);
   transition: 1s cubic-bezier(0.858, 0.01, 0.068, 0.99);
@@ -35,7 +35,7 @@
   position: fixed;
   top: 0;
   z-index: 2;
-  background: var(--primary);
+  background: var(--secondary);
   -webkit-transition: 2s cubic-bezier(0.858, 0.01, 0.068, 0.99);
   -o-transition: 2s cubic-bezier(0.858, 0.01, 0.068, 0.99);
   transition: 2s cubic-bezier(0.858, 0.01, 0.068, 0.99);
