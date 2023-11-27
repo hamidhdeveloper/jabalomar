@@ -18,13 +18,13 @@ jQuery(document).ready(function () {
 
   ////////////////fill text animation start//////////////////////////////////////
   setTimeout(function () {
-    jQuery(".myfill-title").css({
+    jQuery(".main_header").css({
       "background-position": "0",
     });
   }, 900); // 2000 milliseconds = 2 seconds
 
   setTimeout(function () {
-    jQuery(".myfill-text").css({
+    jQuery(".slider_content").css({
       "background-position": "0",
     });
   }, 1100); // 2000 milliseconds = 2 seconds
