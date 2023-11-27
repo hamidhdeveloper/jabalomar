@@ -137,6 +137,22 @@
         
       }
 
+
+
+      // javascript for heading filling animation like n24
+document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                    var styleTag = document.createElement('style');
+                    styleTag.innerHTML = '.load-title-fill:before { width: 100% !important; }';
+                    document.head.appendChild(styleTag);
+                }, 1800); // Adjust the delay as needed
+                setTimeout(function() {
+                    var styleTag = document.createElement('style');
+                    styleTag.innerHTML = '.load-title-fill:after { width: 100% !important; }';
+                    document.head.appendChild(styleTag);
+                }, 1900); // Adjust the delay as needed
+        });
+
   </script>
 
 <?php wp_footer(); ?>
