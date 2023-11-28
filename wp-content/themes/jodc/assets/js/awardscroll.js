@@ -53,4 +53,6 @@ const slider = document.querySelector(".slider-inner");
         
       }
 
+
+
       
