@@ -4,54 +4,61 @@ Template Name: about
 */
 ?>
 
-<?php get_header();?>
+<?php get_header('page');?>
 <!-----------------------------------------------page content---------------------------------->
 
 
    <!-- About  main Section  -->
+
+
    <div class="container-fluid" style="padding:0px; position:relative;" >
-   <div class="about_overlay"></div>
+
         <div class="about-main-section">
           <div class="about-main-left">
-            <img src="<?php bloginfo('template_url')?>/assets/images/about-main.png" />
+            <img src="<?php the_post_thumbnail_url(); ?>" />
           </div>
           <div class="about-main-right">
-            <!-- about us page text  -->
-            <!-- <h1 class="about-main-h1 myfill-about-title">Lorem ipsum dolor</h1>
-            <p class="about-main-para myfill-about-text">
-              Lorem ipsum dolor sit amet, consectetuer<br />
-              adipiscing elit, sed diam nonummy nibh eli
-            </p> -->
-            <!-- about us page text end  -->
 
-            <h2 class="large-title-bold">
-            <span class="load-title-fill" data-text="The best"
-              >The best</span
-            ><br />
-            <span
-              class="load-title-fill"
-              data-text="Services you"
-              >Services you</span
-            ><br />
-            <span
-              class="load-title-fill"
-              data-text="can think of"
-              >can think of</span
-            >
-          </h2>
-          <p class="load-para">
-            <span class="load-title-fill" data-text="something"
-              >something</span
-            >
-            <span class="load-title-fill" data-text="out of"
-              >out of</span
-            >
-            <span
-              class="load-title-fill"
-              data-text="this world"
-              >this world</span
-            >
-          </p>
+
+            <div class="banner_text_container">
+                                    <?php
+                        // Get the page main title
+                        $pageMainTitle = get_field('page_main_title');
+
+                        // Split the title into words
+                        $words = explode(' ', $pageMainTitle);
+
+                        // Group the words (2 words per line)
+                        $groupedWords = array_chunk($words, 2);
+
+                        // HTML structure
+                        echo '<h2 class="large-title-bold">';
+                        foreach ($groupedWords as $group) {
+                            echo '<span class="load-title-fill" data-text="' . implode(' ', $group) . '">'
+                                . implode(' ', $group) . '</span><br />';
+                        }
+                        echo '</h2>';
+                        ?>
+
+                              <?php
+                              // Get the page subtitle
+                              $pageSubtitle = get_field('page_subtitle');
+
+                              // Split the subtitle into words
+                              $words = explode(' ', $pageSubtitle);
+
+                              // Group the words (9 words per line)
+                              $groupedWords = array_chunk($words, 10);
+
+                              // HTML structure
+                              echo '<p class="load-para">';
+                              foreach ($groupedWords as $group) {
+                                  echo '<span class="load-title-fill" data-text="' . implode(' ', $group) . '">'
+                                      . implode(' ', $group) . '</span><br />';
+                              }
+                              echo '</p>';
+                              ?>
+            </div><!--end of banner_text_container-->
             
      
                        <!-- scroll btn start  -->
@@ -63,12 +70,9 @@ Template Name: about
                 <div class="scroll-btn-flip-box">
                   <span class="scroll-btn-flip" data-text="Scroll">Scroll</span>
                 </div> 
-                </a>
-                </div>
+              </a>
+            </div>
            <!-- scroll btn end -->
-          
-       
-            
 
           </div>
         </div>
@@ -76,8 +80,30 @@ Template Name: about
 
       <!-- About main Section end -->
 
+
+
+
+
+
+
+
+
+<!------------------------------------------------------------end of banner section------------------------------>
+<!--------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
       <!-- sustainability section start -->
-      <section class="container-fluid sustain-fluid-container">
+      <section class="container-fluid sustain-fluid-container" id="down">
             <div class="container sustain-container">
                  <div class="sustain-left">
                         <h1>Lorem ipsum</h1>
@@ -228,47 +254,6 @@ Template Name: about
 
 </div><!--end of pages_content_container-->
 <!-----------------------------------------------end o page content---------------------------------->
+<?php get_footer('page');?>
 
-<?php get_footer();?>
-<script>
-  jQuery(document).ready(function () {
-    // overlay animation
-  setTimeout(function () {
-    jQuery(".about_overlay").css({
-      "-webkit-transform": "translateX(110%)",
-      "-ms-transform": "translateX(110%)",
-      transform: "translateX(110%)",
-      visibility: "hidden",
-    });
-  }, 700);
-
-  setTimeout(function () {
-    jQuery(".about-main-h1").css({
-      "background-position": "0",
-    });
-  }, 2200);
-
-  setTimeout(function () {
-    jQuery(".about-main-para").css({
-      "background-position": "0",
-    });
-  }, 2400);
-  
-
-});//ready
-
-// javascript for heading filling animation like n24
-document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(function() {
-                    var styleTag = document.createElement('style');
-                    styleTag.innerHTML = '.load-title-fill:before { width: 100% !important; }';
-                    document.head.appendChild(styleTag);
-                }, 1800); // Adjust the delay as needed
-                setTimeout(function() {
-                    var styleTag = document.createElement('style');
-                    styleTag.innerHTML = '.load-title-fill:after { width: 100% !important; }';
-                    document.head.appendChild(styleTag);
-                }, 1900); // Adjust the delay as needed
-        });
-</script>
 

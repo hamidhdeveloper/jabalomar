@@ -493,7 +493,7 @@
       <?php
       endwhile;
       endif;?>
-      <div class="home-scroll-btn" style="margin:0 auto;width:24%;">
+      <div class="home-scroll-btn">
       <div class="arrow-btn-box slider-fade slider-tr-delay06 top-margin-30" style="margin-top: 20px; display: flex; justify-content: center; align-items: center;">
         <a href="" class="arrow-btn pointer-large" style="position:relative"><?php pll_e('view_more') ?></a>
       </div>

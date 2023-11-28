@@ -14,7 +14,7 @@ jQuery(document).ready(function () {
       "-ms-transform": "translateY(0)",
       transform: "translateY(0)",
     });
-  }, 1000); // 2000 milliseconds = 2 seconds
+  }, 1300); // 2000 milliseconds = 2 seconds
 
   ////////////////fill text animation start//////////////////////////////////////
   setTimeout(function () {
